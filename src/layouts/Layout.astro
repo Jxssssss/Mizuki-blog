@@ -378,10 +378,16 @@ if (siteConfig.font) {
 	<body
 		class="min-h-screen"
 		class:list={[
-			{ "lg:is-home": isHomePage, "enable-banner": enableBanner },
+			{ 
+				"lg:is-home": isHomePage, 
+				"enable-banner": enableBanner && siteConfig.wallpaperMode.defaultMode === "banner",
+				"wallpaper-transparent": siteConfig.wallpaperMode.defaultMode === "fullscreen",
+				"no-banner-mode": siteConfig.wallpaperMode.defaultMode === "none" || siteConfig.wallpaperMode.defaultMode === "fullscreen"
+			},
 		]}
 		style={bodyFontFamily ? `font-family: ${bodyFontFamily};` : ""}
 		data-overlayscrollbars-initialize
+		data-default-wallpaper-mode={siteConfig.wallpaperMode.defaultMode}
 	>
 		<noscript
 			><iframe
@@ -401,6 +407,28 @@ if (siteConfig.font) {
 
 		<!-- Pio 看板娘组件 - 仅在启用时加载 -->
 		{pioConfig.enable && <Pio client:idle />}
+		
+		<div id="sakana-widget" class="fixed bottom-4 right-4 z-50"></div>
+        <script>
+            import SakanaWidget from 'sakana-widget';
+			import 'sakana-widget/lib/index.css';
+            
+            // 确保在客户端运行
+            if (typeof window !== 'undefined') {
+                // 如果使用了 Swup，可能需要在每次页面加载后重新初始化或保持实例
+                const initSakana = () => {
+                    if (document.getElementById('sakana-widget')) {
+                        new SakanaWidget().mount('#sakana-widget');
+                    }
+                };
+                
+                // 初始加载
+                initSakana();
+                
+                // 适配 Swup 页面切换
+                document.addEventListener('swup:page:view', initSakana);
+            }
+        </script>
 
 		<!-- increase the page height during page transition to prevent the scrolling animation from jumping -->
 		<div id="page-height-extend" class="hidden h-[300vh]"></div>
@@ -467,24 +495,23 @@ if (siteConfig.font) {
 	//  // ClickScrollPlugin
 	// } from 'overlayscrollbars';
 	// import {getHue, getStoredTheme, setHue, setTheme} from "../utils/setting-utils";
-	import { pathsEqual, url } from "../utils/url-utils";
 	import {
-		// BANNER_HEIGHT,
-		// BANNER_HEIGHT_HOME,
-		// BANNER_HEIGHT_EXTEND,
-		// MAIN_PANEL_OVERLAPS_BANNER_HEIGHT,
-		DARK_MODE,
-		DEFAULT_THEME,
-	} from "../constants/constants";
+// BANNER_HEIGHT,
+// BANNER_HEIGHT_HOME,
+// BANNER_HEIGHT_EXTEND,
+// MAIN_PANEL_OVERLAPS_BANNER_HEIGHT,
+DARK_MODE,
+DEFAULT_THEME,
+} from "../constants/constants";
+import { pathsEqual, url } from "../utils/url-utils";
 
 	const BANNER_HEIGHT = 35;
 	const BANNER_HEIGHT_EXTEND = 30;
 	const BANNER_HEIGHT_HOME = BANNER_HEIGHT + BANNER_HEIGHT_EXTEND;
 
 	// const MAIN_PANEL_OVERLAPS_BANNER_HEIGHT = 3.5;
-	import { siteConfig } from "../config";
-	import { widgetConfigs } from "../config";
-	import { initSakura } from "../utils/sakura-manager";
+	import { siteConfig, widgetConfigs } from "../config";
+import { initSakura } from "../utils/sakura-manager";
 
 	// const setTimeout = window.setTimeout;
 	// @ts-ignore

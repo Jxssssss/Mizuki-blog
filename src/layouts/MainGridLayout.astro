@@ -274,6 +274,26 @@ const transparentClass = shouldEnableTransparency
 				break;
 		}
 		
+		// 立即处理 banner-wrapper 的显示状态
+		const bannerWrapper = document.getElementById('banner-wrapper');
+		if (bannerWrapper) {
+			if (wallpaperMode !== 'banner') {
+				bannerWrapper.style.display = 'none';
+			} else {
+				bannerWrapper.style.display = 'block';
+			}
+		}
+		
+		// 立即处理 fullscreen-wallpaper 的显示状态
+		const fullscreenWallpaper = document.querySelector('[data-fullscreen-wallpaper]');
+		if (fullscreenWallpaper) {
+			if (wallpaperMode !== 'fullscreen') {
+				fullscreenWallpaper.style.display = 'none';
+			} else {
+				fullscreenWallpaper.style.display = 'block';
+			}
+		}
+		
 		// 立即调整主内容区域位置和布局模式（避免闪烁和位置错误）
 		// 使用 requestAnimationFrame 确保 DOM 准备好
 		requestAnimationFrame(function() {
@@ -598,7 +618,18 @@ const transparentClass = shouldEnableTransparency
 </div>
 
 <!-- Banner - 始终渲染，通过 JS 控制显示隐藏 -->
-<div id="banner-wrapper" class={`absolute z-10 w-full transition duration-700 overflow-hidden ${mobileNonHomeBannerClass}`} style={`top: -${BANNER_HEIGHT_EXTEND}vh`}>
+<div id="banner-wrapper" class={`absolute z-10 w-full transition duration-700 overflow-hidden ${mobileNonHomeBannerClass}`} style={`top: -${BANNER_HEIGHT_EXTEND}vh; ${siteConfig.wallpaperMode.defaultMode !== 'banner' ? 'display: none;' : ''}`}>
+    <script is:inline>
+        // 立即执行脚本：防止闪烁
+        (function() {
+            const mode = localStorage.getItem('wallpaperMode') || document.body.getAttribute('data-default-wallpaper-mode') || 'banner';
+            if (mode !== 'banner') {
+                document.currentScript.parentElement.style.display = 'none';
+            } else {
+                document.currentScript.parentElement.style.display = 'block';
+            }
+        })();
+    </script>
 
     {siteConfig.banner.carousel?.enable && ((bannerImages.desktop && Array.isArray(bannerImages.desktop) && bannerImages.desktop.length > 1) || (bannerImages.mobile && Array.isArray(bannerImages.mobile) && bannerImages.mobile.length > 1)) ? (
         <!-- Carousel mode for multiple images -->
