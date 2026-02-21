@@ -220,9 +220,9 @@ export const siteConfig: SiteConfig = {
 		},
 		cjkFont: {
 			// 中日韩字体 - 作为回退字体
-			fontFamily: "萝莉体 第二版",
+			fontFamily: "",
 			fontWeight: "500",
-			localFonts: ["萝莉体 第二版.ttf"],
+			localFonts: [""],
 			enableCompress: true, // 启用字体子集优化，减少字体文件大小
 		},
 	},
@@ -621,7 +621,7 @@ export const sakuraConfig: SakuraConfig = {
 
 // Pio 看板娘配置
 export const pioConfig: import("./types/config").PioConfig = {
-	enable: true, // 启用看板娘
+	enable: false, // 启用看板娘
 	models: ["/pio/models/pio/model.json"], // 默认模型路径
 	position: "left", // 模型位置
 	width: 280, // 默认宽度
