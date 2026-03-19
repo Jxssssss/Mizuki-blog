@@ -1,7 +1,7 @@
 ---
 title: My-first-agent
 published: 2026-02-21
-pinned: true
+pinned: false
 description: 跟随hello-agents项目做的第一个agent
 tags: [Agent, Python]
 category: Code

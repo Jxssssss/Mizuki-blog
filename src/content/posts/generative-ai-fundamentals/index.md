@@ -1,7 +1,7 @@
 ---
 title: Generative-ai-fundamental
 published: 2026-03-19
-pinned: true
+pinned: false
 description: 大型语言模型的基本原理
 tags: [Agent, Python]
 category: Code
