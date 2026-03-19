@@ -1,3 +1,20 @@
+---
+title: My-first-agent
+published: 026-03-19
+pinned: true
+description: 大型語言模型的基本原理
+tags: [Agent, Python]
+category: Code
+licenseName: "Unlicensed"
+author: JXSSSSSS
+sourceLink: "https://github.com/emn178/markdown"
+draft: false
+date: 2026-03-19
+image: "./cover.png"
+pubDate: 026-03-19
+permalink: "encrypted-example"
+---
+
 # 📖 第一講：大型語言模型的基本原理 — 學習筆記
 
 > **課程**：李宏毅教授《生成式人工智慧及機器學習導論》第一講  
