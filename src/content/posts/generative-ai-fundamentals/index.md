@@ -12,7 +12,7 @@ draft: false
 date: 2026-03-19
 image: "./cover.png"
 pubDate: 2026-03-19
-permalink: "encrypted-example"
+permalink: "generative-ai-fundamental"
 ---
 
 # 📖 第一讲：大型语言模型的基本原理 — 学习笔记

@@ -12,7 +12,7 @@ draft: false
 date: 2026-02-21
 image: "./cover.png"
 pubDate: 2026-02-21
-permalink: "encrypted-example"
+permalink: "my-first-agent"
 ---
 
 # 跟随hello-agents制作的第一个agent-旅行规划agent的代码解析学习
