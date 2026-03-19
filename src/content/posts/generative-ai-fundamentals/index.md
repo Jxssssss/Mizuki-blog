@@ -1,6 +1,6 @@
 ---
 title: My-first-agent
-published: 026-03-19
+published: 2026-03-19
 pinned: true
 description: 大型語言模型的基本原理
 tags: [Agent, Python]
@@ -11,7 +11,7 @@ sourceLink: "https://github.com/emn178/markdown"
 draft: false
 date: 2026-03-19
 image: "./cover.png"
-pubDate: 026-03-19
+pubDate: 2026-03-19
 permalink: "encrypted-example"
 ---
 
