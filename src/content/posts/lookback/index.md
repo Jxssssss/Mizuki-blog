@@ -1,6 +1,6 @@
 ---
 title: Lookback
-published: 2026-03-19
+published: 2026-03-22
 pinned: false
 description: 蓦然回首漫画翻译
 tags: [Korean]
@@ -9,9 +9,9 @@ licenseName: "Unlicensed"
 author: JXSSSSSS
 sourceLink: "https://github.com/emn178/markdown"
 draft: false
-date: 2026-03-19
+date: 2026-03-22
 image: "./lookback.jpg"
-pubDate: 2026-03-19
+pubDate: 2026-03-22
 permalink: "lookback"
 ---
 # 蓦然回首韩文版-翻译
