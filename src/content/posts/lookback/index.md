@@ -16,7 +16,7 @@ permalink: "lookback"
 ---
 # 蓦然回首韩文版-翻译
 
-![71d891b48b31edefbeb511fd9f70043e.jpeg](71d891b48b31edefbeb511fd9f70043e.jpeg)
+![71d891b48b31edefbeb511fd9f70043e.jpeg](https://jxssssss.xyz/%EB%A7%8C%ED%99%94/71d891b48b31edefbeb511fd9f70043e.jpeg)
 
 이번 주 학년 신문을 나눠 주겠다~
 
@@ -28,7 +28,7 @@ permalink: "lookback"
 > 这周的四格漫画也超级有意思!
 > 
 
-![a92c89c6ca76007a1b06633478b9c707.jpeg](a92c89c6ca76007a1b06633478b9c707.jpeg)
+![a92c89c6ca76007a1b06633478b9c707.jpeg](https://jxssssss.xyz/%EB%A7%8C%ED%99%94/a92c89c6ca76007a1b06633478b9c707.jpeg)
 
 - **第一格：**
     - 背景文字：둘 다 사고로 죽기 직전（两人在事故中濒死之际）
@@ -87,7 +87,7 @@ permalink: "lookback"
 
 ---
 
-![IMG_7324.JPG](IMG_7324.JPG)
+![IMG_7324.JPG](https://jxssssss.xyz/%EB%A7%8C%ED%99%94/IMG_7324.JPG)
 
 학년 신문의 4컷 만화 코너 말인데.
 
@@ -167,7 +167,7 @@ permalink: "lookback"
 | **그린다는** | 그리다（画）+ -ㄴ다는（引用形式），"说是在画/画着的" |
 | **것 같더구나** | 것 같다（好像/似乎）+ -더구나（说话者对新发现的感叹），"好像是这样呢" |
 
-![IMG_7325.JPG](IMG_7325.JPG)
+![IMG_7325.JPG](https://jxssssss.xyz/%EB%A7%8C%ED%99%94/IMG_7325.JPG)
 
 학교에도 못 오는 나약한 애가 만화를 그릴 수 있을까요?
 
@@ -212,7 +212,7 @@ permalink: "lookback"
 | **부모님께도** | 부모님（父母，含尊称 -님）+ 께（对长辈用的方向格助词，에게 的敬语）+ 도（也） |
 | **보여 드리고~** | 보이다（展示/让看）+ -어 드리다（为长辈做某事的敬语形式）+ -고（并列/延续），"也让（家长）看看~" |
 
-![0001.jpeg](0001.jpeg)
+![0001.jpeg](https://jxssssss.xyz/%EB%A7%8C%ED%99%94/0001.jpeg)
 
 이놈!! 복도에서 뛰는 건 교칙 위반이야!!
 
@@ -252,7 +252,7 @@ permalink: "lookback"
 
 ---
 
-![0002.jpeg](0002.jpeg)
+![0002.jpeg](https://jxssssss.xyz/%EB%A7%8C%ED%99%94/0002.jpeg)
 
 완전 프로잖아.
 
@@ -290,7 +290,7 @@ permalink: "lookback"
 
 ---
 
-![0003.jpeg](0003.jpeg)
+![0003.jpeg](https://jxssssss.xyz/%EB%A7%8C%ED%99%94/0003.jpeg)
 
 세상에~! 후지노, 어쩜 이렇게 그림을 잘 그리니?!
 
@@ -331,7 +331,7 @@ permalink: "lookback"
 
 ---
 
-![0004.jpeg](0004.jpeg)
+![0004.jpeg](https://jxssssss.xyz/%EB%A7%8C%ED%99%94/0004.jpeg)
 
 후지노의 그림은 평범하다~!
 
@@ -355,7 +355,7 @@ permalink: "lookback"
 
 ---
 
-![0005.jpeg](0005.jpeg)
+![0005.jpeg](https://jxssssss.xyz/%EB%A7%8C%ED%99%94/0005.jpeg)
 
 4학년에 나보다 그림을 더 잘 그리는 녀석이 있다니!
 
