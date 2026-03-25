@@ -408,23 +408,48 @@ if (siteConfig.font) {
 		<!-- Pio 看板娘组件 - 仅在启用时加载 -->
 		{pioConfig.enable && <Pio client:idle />}
 		
-		<div id="sakana-widget" class="fixed bottom-4 right-4 z-50"></div>
+		<div id="sakana-widget" class="fixed bottom-4 right-12 z-50"></div>
         <script>
             import SakanaWidget from 'sakana-widget';
-			import 'sakana-widget/lib/index.css';
-            
+import 'sakana-widget/lib/index.css';
+
             // 确保在客户端运行
             if (typeof window !== 'undefined') {
-                // 如果使用了 Swup，可能需要在每次页面加载后重新初始化或保持实例
+                // 先触发内部角色注册表初始化（registerCharacter 不会自动初始化）
+                SakanaWidget.getCharacters();
+
+                // 注册自定义角色 sunna（上下弹跳）
+                SakanaWidget.registerCharacter('sunna', {
+                    image: 'https://asset.jxssssss.xyz/character/%E5%8D%83%E5%A4%8F-%E5%93%88%E6%B0%94.png',
+                    initialState: { i: 0.005, s: 0.1, d: 0.99, r: 1, y: 20, t: 0, w: 0 },
+                });
+
+                // 注册自定义角色 yu（左右摆动）
+                SakanaWidget.registerCharacter('yu', {
+                    image: 'https://asset.jxssssss.xyz/character/%E5%8D%97%E5%AE%AB-%E5%AE%B3%E7%BE%9E.png',
+                    initialState: { i: 0.005, s: 0.1, d: 0.988, r: 12, y: 2, t: 0, w: 0 },
+                });
+
+                // 覆盖 getCharacters，过滤掉默认角色，只在 sunna 和 yu 之间切换
+                const _origGetCharacters = SakanaWidget.getCharacters;
+                SakanaWidget.getCharacters = () => {
+                    const all = _origGetCharacters();
+                    delete all.chisato;
+                    delete all.takina;
+                    return all;
+                };
+
                 const initSakana = () => {
-                    if (document.getElementById('sakana-widget')) {
-                        new SakanaWidget().mount('#sakana-widget');
+                    const el = document.getElementById('sakana-widget');
+                    if (el) {
+                        el.innerHTML = '';
+                        new SakanaWidget({ character: 'sunna' }).mount('#sakana-widget');
                     }
                 };
-                
+
                 // 初始加载
                 initSakana();
-                
+
                 // 适配 Swup 页面切换
                 document.addEventListener('swup:page:view', initSakana);
             }
