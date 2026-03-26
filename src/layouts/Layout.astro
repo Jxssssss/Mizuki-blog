@@ -443,15 +443,26 @@ import 'sakana-widget/lib/index.css';
                     const el = document.getElementById('sakana-widget');
                     if (el) {
                         el.innerHTML = '';
-                        new SakanaWidget({ character: 'sunna' }).mount('#sakana-widget');
+                        let currentChar = sessionStorage.getItem('sakana-character') || 'sunna';
+						console.log('Initializing Sakana Widget with character:', currentChar);
+                        const widget = new SakanaWidget({ character: currentChar });
+                        // 获取角色列表用于切换时推算下一个角色
+                        const charNames = Object.keys(SakanaWidget.getCharacters());
+                        // 监听角色切换，保存当前选择
+                        const origNext = widget.nextCharacter.bind(widget);
+                        widget.nextCharacter = function() {
+                            const result = origNext();
+                            const idx = charNames.indexOf(currentChar);
+                            currentChar = charNames[(idx + 1) % charNames.length];
+                            sessionStorage.setItem('sakana-character', currentChar);
+                            return result;
+                        };
+                        widget.mount('#sakana-widget');
                     }
                 };
 
                 // 初始加载
                 initSakana();
-
-                // 适配 Swup 页面切换
-                document.addEventListener('swup:page:view', initSakana);
             }
         </script>
 
